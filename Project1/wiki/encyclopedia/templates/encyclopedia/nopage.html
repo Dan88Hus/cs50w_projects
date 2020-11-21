@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entryTitle }}
+{% endblock %}
+
+{% block body %}
+<div class="alert alert-danger">
+  There is "No Page" for {{ entryTitle }}
+</div>  
+
+{% endblock %}

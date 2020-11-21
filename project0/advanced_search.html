@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/googlesearch/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/googlesearch/favicon.ico">
+    <head>
+        <title>Search</title>
+    </head>
+    <body>
+        <!-- link area -->
+        <div class="adv_navbar links">
+          <!-- <ol> -->
+            <li><a href="/index.html"><img src="/googlesearch/logo.png" alt="logo"></a></li>
+            <li class="textlink"><a href="/index.html">Back to Google Search</a></li>
+          <!-- </ol> -->
+          
+        </div>
+        <div class="adv_head">
+          <h1 class="adv_t_head">Advanced Search</h1>
+        </div>
+        <!-- section start -->
+        <section class="adv_filterhead">
+          <div class="adv_headdiv">
+            <h3 class="adv_htree black">Find pages with...</h3>
+          </div>
+          <!-- first div ends -->
+          <div class="adv_headdiv">
+            <h3 class="adv_htree grey">To do this in the search box.</h3>
+        </section>
+          </div>
+            <section class="filter-form">
+              <!-- advanced_search.html?allthewords=a1&exactword=a2&anythesewords=a3&nonethesewords=a4#. -->
+              <!-- https://www.google.com/search?as_q=a1&as_epq=a2&as_oq=a3&as_eq=a4&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=images&as_filetype=&tbs= -->
+              <form action="https://google.com/search" id="form1">
+                <!-- allthewords -->
+                <!-- google use name field -->
+                <div class="filter-group">
+                  <label for="allthewords">all the words: </label>
+                  <input type="text" name="as_q" id="allthewords">
+                  <h4 class="explanation">Type the important words: tri-colour rat terrier</h4>
+                </div>
+                <!-- this exact word or phrase: -->
+                <div class="filter-group">
+                  <label for="exactword">this exact word or phrase: </label>
+                  <input type="text" name="as_epq" id="exactword">
+                  <h4 class="explanation">Put exact words in quotes: "rat terrier"</h4>
+                </div>
+                <!-- any of these words: -->
+                <div class="filter-group">
+                  <label for="anythesewords">any of these words: </label>
+                  <input type="text" name="as_oq" id="anythesewords">
+                  <h4 class="explanation">Type OR between all the words you want: miniature OR standard</h4>
+                </div>
+                <!--none of these words:  -->
+                <div class="filter-group">
+                  <label for="nonethesewords">none of these words: </label>
+                  <input type="text" name="as_eq" id="nonethesewords">
+                  <h4 class="explanation">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</h4>
+                </div>
+              </form>
+            <button type="submit" form="form1" value="Advanced_Search">Advanced Search</button>
+            </section>
+    </body>
+</html>
