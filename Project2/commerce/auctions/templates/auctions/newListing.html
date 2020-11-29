@@ -1,0 +1,24 @@
+{% extends "auctions/layout.html" %}
+
+{% block title%}New Listing{% endblock %}
+
+{% block body %}
+    <h2>New Listing</h2>
+    {% if success %}
+        <h3>Successfully Created</h3>
+    {% endif %}
+    <div class="form-group">
+        <form action="{% url 'newListing' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!-- The management form is available as an attribute of the formset itself.
+               When rendering a formset in a template, you can include all the management data by rendering -->
+            {{ imageForm.management_form }}
+            {% for form in imageForm %}
+                {{ form.as_p }}
+            {% endfor %}
+            <input type=submit value="Save">
+        </form>
+        
+    </div>  
+{% endblock %}
